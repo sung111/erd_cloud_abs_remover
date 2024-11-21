@@ -1,0 +1,25 @@
+{
+    "name": "Erd Cloud Ads Remover",
+    "description": "Removes Erd Cloud Ads.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting",
+      "webNavigation"
+    ],
+    "host_permissions": [
+      "*://*.erdcloud.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.erdcloud.com/*"],
+            "js": ["script.js"]
+        }
+    ],
+    "author": "bonk159@gmail.com"
+  }
